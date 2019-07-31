@@ -1,0 +1,209 @@
+body {
+    margin: 0;
+    color: #111;
+    font: 300 18px/18px Roboto;
+    background: -webkit-linear-gradient(90deg, #DAD299 10%, #bf959b 90%);
+    background: -webkit-linear-gradient(0deg, #DAD299 10%, #bf959b 90%);
+    background: linear-gradient(90deg, #DAD299 10%, #bf959b 90%);
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box
+}
+
+/*---------------X---------------------------*/
+.cross {
+    width: 40px;
+    position: absolute;
+    background-color: #b8a73b;
+    height: 100%
+}
+
+.cross:hover {
+    background-color: #78303a;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.cross:hover .line1,
+.cross:hover .line2 {
+    width: 30px;
+}
+
+.cross:hover .line1 {
+    transform: translateX(10%) translateY(600%) rotate(45deg);
+}
+
+.cross:hover .line2 {
+    transform: translateX(10%) translateY(600%) rotate(-45deg);
+}
+
+.line1,
+.line2 {
+    width: 25px;
+    height: 3px;
+    position: absolute;
+    transition-duration: 0.5s;
+    background-color: white;
+}
+
+.line1 {
+    transform: translateX(30%) translateY(200%);
+}
+
+.line2 {
+    transform: translateX(30%) translateY(400%);
+}
+
+/*---------------X---------------------------*/
+
+.fresh-ui-wrap {
+    width: 340px;
+    height: 534px;
+    margin: 5% auto;
+    overflow: hidden;    
+    position: relative;
+    box-shadow: 0 12px 15px 0 #000, 0 17px 70px 0 rgba(0, 0, 0, .2);
+}
+
+.fresh-ui {
+    padding: 25px;
+    height: 100%;
+    border-top: 3px solid;
+    background: #78303a;
+    margin-left: 40px;
+}
+
+/*彈出*/
+.fresh-ui:hover .header .social .list a {
+    transform: translateX(-20px);
+}
+
+.fresh-ui .header {
+    position: relative;
+}
+
+.fresh-ui .header .photo img {
+    width: 100%;
+    display: block;
+}
+
+.social {
+    top: 0;
+    right: 0;
+    height: 220px;
+    width: 150px;
+    padding: 15px;
+    overflow: hidden;
+    position: absolute;
+}
+
+/*黑影*/
+.fresh-ui .header .social:after {
+    top: 0;
+    left: 150px;
+    content: '';
+    width: 300px;
+    height: 260px;
+    position: absolute;
+    background: rgba(0, 0, 0, .5);
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    transition: all .35s ease-in-out 0s;
+}
+
+.fresh-ui .header:hover .social:after {
+    left: -150px;
+}
+
+.fresh-ui .header:hover .social .list a:before {
+    right: 40px;
+}
+
+.fresh-ui .header .social .list {
+    right: -10px;
+    z-index: 999;
+    position: absolute;
+}
+
+.fresh-ui .header .social .list a {
+    width: 30px;
+    height: 30px;
+    color: inherit;
+    display: block;
+    margin: 12px 0;
+    background: #fff;
+    line-height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    -webkit-transform: translateX(30px);
+    -webkit-transition: all .4s ease-in-out 0s;
+    transition: all .4s ease-in-out 0s;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+}
+
+.fresh-ui .header .social .list a:before {
+    top: 0;
+    color: #f2dfeb;
+    right: 200px;
+    font-size: 14px;
+    padding: 0 10px;
+    min-width: 80px;
+    position: absolute;
+    border-radius: 2px;
+    content: attr(data-title);
+    background-color: rgba(0, 0, 0, .4);
+    -webkit-transition: all .4s ease-in-out 0s;
+    transition: all .4s ease-in-out 0s;
+}
+
+.fresh-ui .header .social .list a:nth-child(1),
+.fresh-ui .header .social .list a:nth-child(1):before {
+    -webkit-transition-duration: .1s;
+    transition-duration: .1s;
+}
+
+.fresh-ui .header .social .list a:nth-child(2),
+.fresh-ui .header .social .list a:nth-child(2):before {
+    -webkit-transition-duration: .2s;
+    transition-duration: .2s;
+}
+
+.fresh-ui .header .social .list a:nth-child(3),
+.fresh-ui .header .social .list a:nth-child(3):before {
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+}
+
+.fresh-ui .header .social .list a:nth-child(4),
+.fresh-ui .header .social .list a:nth-child(4):before {
+    -webkit-transition-duration: .4s;
+    transition-duration: .4s;
+}
+
+.fresh-ui .content {
+    padding-top: 30px;
+}
+
+.fresh-ui .content .name {
+    font-size: 28px;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.fresh-ui .content .text {
+    line-height: 24px;
+}
+
+.fresh-ui .content .list a {
+    float: left;
+    clear: both;
+    color: inherit;
+    font-size: 16px;
+    line-height: 20px;
+    display: inline-block;
+    text-decoration: none;
+}
