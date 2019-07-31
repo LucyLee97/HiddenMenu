@@ -1,2 +1,2 @@
 # HiddenMenu
-Test--> https://lucylee97.github.io/HiddenMenu/index.html
+DEMO--> https://lucylee97.github.io/HiddenMenu/index.html
